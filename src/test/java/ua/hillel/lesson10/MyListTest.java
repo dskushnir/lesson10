@@ -20,13 +20,15 @@ public class MyListTest {
         assertFalse(list.isEmpty());
         MyList.Node<String>tail=list.tail();
         assertEquals(tail.getValue(),"3");
-        list.remove("2");
-        list.iterate(System.out::println);
-        System.out.println(list.get(1));
         assertTrue(list.size()==3);
+        assertArrayEquals(new Object[]{"1","2","3"},list.toArray());
+        list.remove("2");
+       list.iterate(System.out::println);
+        System.out.println(list.get(1));
+
         assertTrue(list.contains("3"));
         assertFalse(list.contains("4"));
-        assertArrayEquals(new Object[]{"1","2","3"},list.toArray());
+
 
        /* for (String s : list){
             System.out.println(s);
@@ -40,23 +42,3 @@ public class MyListTest {
     }
 
 
-
-        }
-      
-            
-        }
-       
-            
-        }
-        
-            
-        }
-        }
-
-
-    }
-
-
-
-
-}

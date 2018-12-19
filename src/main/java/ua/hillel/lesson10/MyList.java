@@ -191,6 +191,7 @@ public class MyList <E>implements List<E> {
         private T value;
         private Node<T> next;
 
+
         public T getValue() {
             return value;
         }
@@ -202,6 +203,9 @@ public class MyList <E>implements List<E> {
         public Node(T value, Node<T> next) {
             this.value = value;
             this.next = next;
+        }
+        public Node(T value) {
+            this.value = value;
         }
     }
 
